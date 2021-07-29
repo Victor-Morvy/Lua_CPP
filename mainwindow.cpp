@@ -51,6 +51,8 @@ void MainWindow::updateList()
 
 void MainWindow::fixedUpdate()
 {
+    updateList();
+
 //    w_list->clear();
 
 //    w_list->addItem("Fodase");
@@ -143,6 +145,7 @@ void MainWindow::on_getValBtn_clicked()
 
 void MainWindow::on_resetBtn_clicked()
 {
+    LuaScriptParser::getHandle()->clearMap();
     ui->smn->clear();
     ui->inptxt->clear();
 }

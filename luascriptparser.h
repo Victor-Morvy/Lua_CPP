@@ -23,6 +23,8 @@ public:
 
     LuaScriptParser(){};
 
+    void clearMap(){strMap.clear();}
+
     std::map<std::string, std::string>* getStrMap(){return &strMap;}
 
 protected:

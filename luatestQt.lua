@@ -26,11 +26,19 @@
 --        }
 --SetString("Share.Throttle.Name", "Oito")
 
-local power_name = GetString("Share.Throttle.Name")
+local power_name = tonumber(GetString("num_dinamico"))
 
-local function arroda(a, b)
-    return a + b
+if(power_name > 5) then
+    SetString("Caraio", "Maior que 5")
+elseif(power_name < 5) then
+    SetString("Caraio", "Menor q 5")
+else
+    SetString("Caraio", "é 5")
 end
+
+--local function arroda(a, b)
+--    return a + b
+--end
 
 --if(power_name == "Avada") then
 --    SetString("Share.Throttle.Name", "Oitão")
@@ -40,17 +48,17 @@ end
 --    SetString("Share.Throttle.Name", "Fodase")
 --end
 
-if(arroda(1, 2) > 5) then
-    SetString("Share.Throttle.Name", "Oitão")
-else
-    SetString("Share.Throttle.Teste2", "Teste")
-end
+--if(arroda(1, 2) > 5) then
+--    SetString("Share.Throttle.Name", "Oitão")
+--else
+--    SetString("Share.Throttle.Teste2", "Teste")
+--end
 
 
 
-power_name = GetString("Share.Throttle.Name")
+--power_name = GetString("Share.Throttle.Name")
 
-print(power_name)
+--print(power_name)
 --local power_prcnt = GetNumber("Share.Throttle.Val")
 --local power_on = GetBool("Share.Bool")
 --GetVec3
